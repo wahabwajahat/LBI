@@ -40,6 +40,7 @@ mongoose
   .catch(err => console.log(err));
 
 // Use Routes
+app.use(express.static(path.join(__dirname, 'build')));
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 
